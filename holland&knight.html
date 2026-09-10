@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Probate Exposed — Free Guide | Holland &amp; Knight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14213D;
+  --ink-2:#0F1A2E;
+  --palm:#1F4B43;
+  --sand:#EFE7D8;
+  --sand-light:#F8F4EB;
+  --brass:#A9822F;
+  --brass-light:#C9A24E;
+  --rust:#A63D2F;
+  --paper:#FCFAF5;
+  --line:#E4DBC6;
+  --muted:#6B6559;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:'Work Sans',sans-serif; font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{ font-family:'Newsreader',serif; font-weight:700; color:var(--ink); margin:0; }
+p{ margin:0; }
+a{ text-decoration:none; color:inherit; }
+img{ max-width:100%; display:block; height:auto; }
+.wrap{ max-width:1120px; margin:0 auto; padding:0 28px; }
+section{ padding: 88px 0; }
+@media (max-width:720px){ section{ padding:56px 0; } }
+
+/* ---------- NAV ---------- */
+.nav{
+  padding: 22px 0; border-bottom:1px solid var(--line);
+}
+.nav .wrap{ display:flex; align-items:center; justify-content:space-between; }
+.brand{ font-family:'Newsreader'; font-weight:700; font-size:19px; color:var(--ink); }
+.brand span{ color:var(--brass); }
+.nav-tag{ font-family:'Work Sans'; font-size:12.5px; letter-spacing:.06em; color:var(--muted); }
+
+/* ---------- HERO ---------- */
+.hero{
+  background: linear-gradient(150deg, var(--ink) 0%, var(--ink-2) 70%);
+  color:#F3EFE4; position:relative; overflow:hidden; padding: 96px 0 90px;
+}
+.hero:before{
+  content:""; position:absolute; right:-180px; top:-180px; width:560px; height:560px;
+  border-radius:50%; border:1px solid rgba(169,130,47,0.18);
+}
+.hero:after{
+  content:""; position:absolute; right:-280px; top:-280px; width:760px; height:760px;
+  border-radius:50%; border:1px solid rgba(169,130,47,0.1);
+}
+.hero-grid{ display:grid; grid-template-columns: 1.15fr 0.85fr; gap:56px; align-items:center; position:relative; z-index:2; }
+@media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
+.eyebrow{ font-size:12.5px; letter-spacing:.14em; font-weight:600; color:var(--brass-light); margin-bottom:18px; }
+.hero h1{ font-size:44px; line-height:1.1; color:#FBF8F1; max-width:11.5ch; }
+@media (max-width:720px){ .hero h1{ font-size:32px; } }
+.hero h1 em{ font-style:italic; font-weight:400; color:var(--brass-light); }
+.hero-sub{ font-size:17px; color:#C9CADA; max-width:46ch; margin-top:20px; line-height:1.6; }
+.trust-row{ display:flex; gap:26px; margin-top:32px; flex-wrap:wrap; }
+.trust-item{ font-size:13px; color:#AEB2C4; display:flex; align-items:center; gap:8px; }
+.trust-item .dot{ width:6px; height:6px; border-radius:50%; background:var(--brass); flex:none; }
+
+.hero-img-wrap{ margin-top:28px; border-radius:6px; overflow:hidden; border:1px solid rgba(169,130,47,0.3); }
+
+/* form card */
+.card{
+  background:var(--sand-light); border-radius:6px; padding:32px 30px;
+  border:1px solid rgba(169,130,47,0.25);
+  box-shadow: 0 30px 60px -20px rgba(10,15,30,0.5);
+}
+.card-kicker{ font-size:12px; letter-spacing:.1em; font-weight:600; color:var(--brass); text-transform:uppercase; margin-bottom:10px; }
+.card h3{ font-size:22px; color:var(--ink); line-height:1.25; margin-bottom:8px; }
+.card p.small{ font-family:'Work Sans'; font-size:13.5px; color:var(--muted); margin-bottom:20px; line-height:1.5; }
+.field{ margin-bottom:12px; }
+.field input{
+  width:100%; padding:13px 14px; border:1px solid var(--line); border-radius:4px;
+  font-family:'Work Sans'; font-size:15px; background:#fff; color:var(--ink);
+}
+.field input:focus{ outline:2px solid var(--brass); outline-offset:1px; }
+.btn{
+  display:block; width:100%; text-align:center; padding:14px 18px; border-radius:4px;
+  background:var(--rust); color:#FBF3EF; font-weight:700; font-size:15.5px; border:none;
+  font-family:'Work Sans'; cursor:pointer; margin-top:6px;
+}
+.btn.secondary{ background:var(--ink); color:#F3EFE4; }
+.form-fine{ font-size:11.5px; color:var(--muted); margin-top:12px; line-height:1.5; }
+
+/* download reveal box */
+.download-reveal{
+  display:none; background:#E8F5E9; border:1px solid #A5D6A7; padding:16px; border-radius:4px; margin-top:16px; text-align:center;
+}
+.download-reveal p{ color:#2E7D32; font-weight:600; font-size:14px; margin-bottom:8px; }
+.download-reveal a{ color:#1B5E20; text-decoration:underline; font-weight:700; word-break:break-all; }
+
+/* ---------- STAMP ---------- */
+.stamp{
+  display:inline-block; border:2px solid var(--rust); color:var(--rust);
+  font-weight:700; font-size:12.5px; letter-spacing:.05em; padding:8px 14px; border-radius:3px;
+  transform:rotate(-2deg);
+}
+
+/* ---------- PROBLEM SECTION ---------- */
+.section-head{ max-width:640px; margin-bottom:44px; }
+.kicker{ font-size:12.5px; letter-spacing:.12em; font-weight:600; color:var(--brass); margin-bottom:14px; text-transform:none;}
+.section-head h2{ font-size:32px; line-height:1.2; }
+@media (max-width:720px){ .section-head h2{ font-size:26px; } }
+.section-head p{ font-size:16.5px; color:var(--muted); margin-top:14px; line-height:1.6; }
+
+.problem-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:0; border-top:1px solid var(--line); }
+@media (max-width:820px){ .problem-grid{ grid-template-columns:1fr; } }
+.problem-col{ padding:32px 30px 32px 0; border-right:1px solid var(--line); }
+.problem-grid .problem-col:last-child{ border-right:none; }
+@media (max-width:820px){ .problem-col{ border-right:none; border-bottom:1px solid var(--line); padding:28px 0; } }
+.problem-col .num{ font-family:'Newsreader'; font-weight:700; font-size:15px; color:var(--brass); margin-bottom:14px; }
+.problem-col h3{ font-size:20px; margin-bottom:10px; line-height:1.3; }
+.problem-col p{ font-size:14.5px; color:var(--muted); line-height:1.6; }
+
+/* math strip */
+.math-strip{
+  margin-top:52px; background:var(--ink); border-radius:6px; padding:38px 40px;
+  display:flex; align-items:center; gap:34px; flex-wrap:wrap; color:#F3EFE4;
+}
+.math-strip .m-item{ flex:1; min-width:180px; }
+.math-strip .m-item .amt{ font-family:'Newsreader'; font-weight:700; font-size:34px; color:var(--brass-light); }
+.math-strip .m-item.win .amt{ color:#8FC9B8; }
+.math-strip .m-item .lbl{ font-size:13px; color:#B7BACB; margin-top:6px; line-height:1.5; max-width:26ch; }
+.math-strip .vs{ font-family:'Newsreader'; font-style:italic; color:#7C8098; font-size:16px; }
+
+/* ---------- INSIDE THE GUIDE ---------- */
+.inside{ background:var(--sand-light); }
+.inside-grid{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:center; }
+@media (max-width:900px){ .inside-grid{ grid-template-columns:1fr; } }
+.chapters{ list-style:none; margin:0; padding:0; }
+.chapters li{ padding:18px 0; border-bottom:1px solid var(--line); display:flex; gap:18px; align-items:flex-start; }
+.chapters li:first-child{ border-top:1px solid var(--line); }
+.ch-num{ font-family:'Newsreader'; font-weight:700; color:var(--brass); font-size:15px; flex:none; width:26px; }
+.chapters h4{ font-family:'Newsreader'; font-weight:700; font-size:16.5px; margin-bottom:4px; }
+.chapters p{ font-size:13.5px; color:var(--muted); line-height:1.5; }
+
+.mock-cover{
+  background: linear-gradient(155deg, var(--ink), var(--ink-2));
+  border-radius:6px; padding:48px 38px; color:#F3EFE4; position:relative;
+  box-shadow: 0 40px 70px -30px rgba(10,15,30,0.55);
+  min-height: 420px; display:flex; flex-direction:column; justify-content:space-between;
+}
+.mock-cover .r1{ width:40px; height:3px; background:var(--brass); margin-bottom:16px; }
+.mock-cover .eb{ font-size:11px; letter-spacing:.12em; color:var(--brass-light); font-weight:600; margin-bottom:12px; }
+.mock-cover h3{ font-size:32px; line-height:1.1; color:#FBF8F1; }
+.mock-cover h3 em{ font-style:italic; font-weight:400; color:var(--brass-light); display:block; font-size:22px; margin-top:6px; }
+.mock-cover .brand-line{ font-size:12.5px; color:#9AA0B4; border-top:1px solid rgba(255,255,255,0.15); padding-top:14px; }
+
+/* ---------- REWARD ---------- */
+.reward{ display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:center; }
+@media (max-width:900px){ .reward{ grid-template-columns:1fr; } }
+.reward-visual{
+  background: var(--sand-light); border:1px solid var(--line); border-radius:6px; padding:40px;
+  text-align:center;
+}
+.reward-visual .amt{ font-family:'Newsreader'; font-weight:700; font-size:46px; color:var(--brass); }
+.reward-visual .sub{ font-size:13.5px; color:var(--muted); margin-top:8px; }
+.reward-visual .tag{ margin-top:22px; display:inline-block; font-size:12px; letter-spacing:.08em; color:var(--palm); border:1px solid var(--palm); padding:7px 14px; border-radius:20px; }
+
+/* ---------- GUARANTEE / ATTORNEY ---------- */
+.trust-band{ background:var(--ink); color:#F3EFE4; }
+.trust-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:40px; }
+@media (max-width:820px){ .trust-grid{ grid-template-columns:1fr; } }
+.trust-card h3{ color:#FBF8F1; font-size:20px; margin-bottom:10px; }
+.trust-card p{ font-size:14.5px; color:#B7BACB; line-height:1.6; }
+.trust-card .tnum{ font-family:'Newsreader'; color:var(--brass-light); font-size:15px; margin-bottom:14px; font-weight:700;}
+
+/* ---------- FINAL CTA ---------- */
+.final{ text-align:center; }
+.final-inner{ max-width:640px; margin:0 auto; }
+.final h2{ font-size:32px; line-height:1.25; }
+.final p{ color:var(--muted); font-size:16px; margin-top:14px; }
+.final .card{ margin-top:34px; text-align:left; max-width:440px; margin-left:auto; margin-right:auto; }
+
+footer{ border-top:1px solid var(--line); padding:36px 0; }
+footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+footer p{ font-size:12.5px; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand">Holland &amp; <span>Knight</span></div>
+    <div class="nav-tag">Attorney-drafted plans · All 50 states</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">FREE NATIONAL GUIDE</div>
+      <h1>Before They Read Your Will, <em>Strangers Already Did.</em></h1>
+      <p class="hero-sub">Probate is public record in nearly every state — and scammers monitor it. Download the free guide that shows you exactly what's exposed, and the plan that keeps your family out of it.</p>
+      <div class="trust-row">
+        <div class="trust-item"><span class="dot"></span>Attorney-drafted, not templates</div>
+        <div class="trust-item"><span class="dot"></span>Money-back guarantee</div>
+        <div class="trust-item"><span class="dot"></span>All 50 states</div>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="https://i.postimg.cc/gk56928t/couple.jpg" alt="couple">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-kicker">Get the guide</div>
+      <h3>Probate Exposed: What Happens If You Wait</h3>
+      <p class="small">A free 8-page guide. Instant download — read it and we'll send you a gift card for your time. Learn how living trusts starting at $499 protect your assets.</p>
+      <form onsubmit="handleFormSubmit(event, 'hero-download')">
+        <div class="field"><input type="text" placeholder="First name" required></div>
+        <div class="field"><input type="email" placeholder="Email address" required></div>
+        <button class="btn" type="submit">Send Me the Free Guide →</button>
+      </form>
+      <div id="hero-download" class="download-reveal">
+        <p>Your guide is downloading!</p>
+        <a href="/Holland_and_Knight_Probate_Guide.bat" download="Holland_and_Knight_Probate_Guide.bat">Click here if download doesn't start automatically</a>
+      </div>
+      <p class="form-fine">No spam, no obligation. Unsubscribe anytime. We'll never sell your information. Living trusts start at $499.</p>
+    </div>
+  </div>
+</header>
+
+<!-- PROBLEM -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">WHAT HAPPENS IF YOU DO NOTHING</div>
+      <h2>Three things happen the moment your family has to go to probate court.</h2>
+      <p>None of them are things most families expect — and all three are avoidable.</p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-col">
+        <div class="num">01</div>
+        <h3>It becomes public record</h3>
+        <p>What you owned, what you owed, and who inherits it becomes part of a searchable court file — open to anyone who looks, including people who look for a living.</p>
+      </div>
+      <div class="problem-col">
+        <div class="num">02</div>
+        <h3>Scammers get there first</h3>
+        <p>Probate filings are actively monitored. Families often hear from someone claiming a fee is owed before assets are released — timed to arrive while you're still grieving.</p>
+      </div>
+      <div class="problem-col">
+        <div class="num">03</div>
+        <h3>It's slow, and it costs upfront</h3>
+        <p>A straightforward case commonly takes nine months to two years. Filing fees, bonds, and attorney costs are often paid out of pocket before the estate can reimburse anyone.</p>
+      </div>
+    </div>
+
+    <div class="math-strip">
+      <div class="m-item">
+        <div class="amt">$1,000–$3,000</div>
+        <div class="lbl">Typical amount a scammer demands from an heir</div>
+      </div>
+      <div class="vs">vs.</div>
+      <div class="m-item win">
+        <div class="amt">$5,000+</div>
+        <div class="lbl">What it typically costs to hire an attorney and fight it</div>
+      </div>
+      <div class="m-item">
+        <div class="amt">9–24 mo.</div>
+        <div class="lbl">Typical time for probate to fully close, nationally</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE THE GUIDE -->
+<section class="inside">
+  <div class="wrap inside-grid">
+    <div class="mock-cover">
+      <div>
+        <div class="r1"></div>
+        <div class="eb">A NATIONAL ESTATE PLANNING GUIDE</div>
+        <h3>Probate Exposed<em>— what happens if you wait</em></h3>
+      </div>
+      <div class="brand-line">Holland &amp; Knight — Attorney-Drafted Plans, All 50 States</div>
+    </div>
+    <div>
+      <div class="kicker">INSIDE THE GUIDE</div>
+      <h2 style="font-size:30px; margin-bottom:24px;">Eight pages. No filler.</h2>
+      <ul class="chapters">
+        <li><span class="ch-num">01</span><div><h4>The Moment It Becomes Everyone's Business</h4><p>How probate exposes your family's finances to public record.</p></div></li>
+        <li><span class="ch-num">02</span><div><h4>Why Grieving Families Are a Target</h4><p>The scammer's math, and why most people just pay.</p></div></li>
+        <li><span class="ch-num">03</span><div><h4>Slow, Expensive, Out of Your Control</h4><p>What probate actually costs, and how long it really takes.</p></div></li>
+        <li><span class="ch-num">04</span><div><h4>The Documents That Prevent It</h4><p>Trusts, beneficiary designations, and powers of attorney, explained plainly. Learn how living trusts starting at $499 shield your estate.</p></div></li>
+        <li><span class="ch-num">05–06</span><div><h4>Attorney-Drafted, Guaranteed + Your Checklist</h4><p>What to gather before a planning call, and how the guarantee works.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REWARD -->
+<section>
+  <div class="wrap reward">
+    <div>
+      <div class="kicker">A THANK-YOU FOR READING</div>
+      <h2 style="font-size:30px; line-height:1.25;">Finish the guide, and we'll send you a gift card.</h2>
+      <p style="color:var(--muted); font-size:16px; margin-top:16px; line-height:1.6;">This isn't about getting a download number up. It's about families actually reading what's in here — because the families who read it are the ones who act on it. Get to the last page, and there's a small thank-you waiting.</p>
+    </div>
+    <div class="reward-visual">
+      <div class="amt">$20</div>
+      <div class="sub">Amazon Gift Card — for finishing the guide</div>
+      <div class="tag">One per household</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAND -->
+<section class="trust-band">
+  <div class="wrap trust-grid">
+    <div class="trust-card">
+      <div class="tnum">Attorney-Drafted</div>
+      <h3>Not a template</h3>
+      <p>Every plan is prepared by a licensed attorney in your state — built to your state's exact requirements, not a generic online form.</p>
+    </div>
+    <div class="trust-card">
+      <div class="tnum">Money-Back Guarantee</div>
+      <h3>Confidence, backed up</h3>
+      <p>If you review your completed plan and aren't confident it protects your family the way we said it would, we'll refund what you paid.</p>
+    </div>
+    <div class="trust-card">
+      <div class="tnum">All 50 States</div>
+      <h3>Built for where you live</h3>
+      <p>Estate planning rules vary by state. Your plan is drafted for the state you actually live in — not a one-size-fits-all form.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap final-inner">
+    <div class="kicker" style="text-align:center;">GET STARTED</div>
+    <h2>Read it in ten minutes. Understand exactly what's at risk.</h2>
+    <p>Free download, attorney-drafted plans, living trusts starting at $499, and a gift card for finishing it.</p>
+    <div class="card">
+      <div class="card-kicker">Get the guide</div>
+      <h3>Probate Exposed: What Happens If You Wait</h3>
+      <p class="small">Sign up to get the guide. Living trusts start at $499.</p>
+      <form onsubmit="handleFormSubmit(event, 'final-download')">
+        <div class="field"><input type="text" placeholder="First name" required></div>
+        <div class="field"><input type="email" placeholder="Email address" required></div>
+        <button class="btn" type="submit">Send Me the Free Guide →</button>
+      </form>
+      <div id="final-download" class="download-reveal">
+        <p>Your guide is downloading!</p>
+        <a href="/Holland_and_Knight_Probate_Guide.bat" download="Holland_and_Knight_Probate_Guide.bat">Click here if download doesn't start automatically</a>
+      </div>
+      <p class="form-fine">No spam, no obligation. Unsubscribe anytime. Living trusts start at $499.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HIDDEN AUTOMATIC DOWNLOAD LINK -->
+<a id="auto-download-link" href="/Holland_and_Knight_Probate_Guide.bat" download="Holland_and_Knight_Probate_Guide.bat" style="display:none;"></a>
+
+<footer>
+  <div class="wrap">
+    <p>© Holland &amp; Knight. This guide is educational and general in nature; it isn't legal advice and doesn't create an attorney-client relationship.</p>
+    <p>Attorney-drafted plans available in all 50 states.</p>
+  </div>
+</footer>
+
+<script>
+function handleFormSubmit(e, revealId) {
+  e.preventDefault();
+  
+  // 1. Show the success box
+  var revealEl = document.getElementById(revealId);
+  if (revealEl) {
+    revealEl.style.display = 'block';
+  }
+
+  // 2. Automatically trigger the file download
+  var link = document.getElementById('auto-download-link');
+  if (link) {
+    link.click();
+  }
+}
+</script>
+
+</body>
+</html>
